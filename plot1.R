@@ -1,3 +1,5 @@
+library(graphics)
+
 # Creates a png file with a histogram of global active power from 2007-02-01 and 2007-02-02
 
 library(graphics)

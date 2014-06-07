@@ -1,3 +1,5 @@
+library(graphics)
+
 # Create a PNG file with a plot of Global active power totals across Thursday, Friday and Saturdayd
 
 # Download and unzip the file

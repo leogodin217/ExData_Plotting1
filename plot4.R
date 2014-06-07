@@ -1,3 +1,4 @@
+library(graphics)
 # Download and unzip the file
 
 download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", destfile="data/data.zip")
@@ -38,8 +39,8 @@ lines(x=timed_data$Date, y=timed_data$Sub_metering_3, type="l", col="blue")
 legend("topright", legend=names(timed_data[7:9]), col=c("black", "red", "blue"), lty=c(1, 1, 1), cex=.75, bty="n")
 
 # Create the fourth plot, Global active power less than or equal to .5
-low_power = timed_data[timed_data$Global_active_power <= .5, ]
-plot(x=low_power$Date, y=low_power$Global_active_power, type="l", ylab="datetime")
+
+plot(x=timed_data$Date, y=timed_data$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
 
 dev.off()
 
